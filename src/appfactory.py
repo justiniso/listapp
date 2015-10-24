@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import importlib
 import pkgutil
 
 from flask import Flask, Blueprint
-
-from src.api.database import db
 
 
 def _register_blueprints(app, blueprints):
@@ -34,8 +31,6 @@ def create_app(package_name, blueprints=None):
     :param blueprints: blueprint module
     """
     app = Flask(package_name, instance_relative_config=True)
-
-    db.init_app(app)
 
     if blueprints:
         _register_blueprints(app, blueprints)

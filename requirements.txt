@@ -1,2 +1,4 @@
 Flask
-flask_sqlalchemy
+flask_restful
+psycopg2
+python-dateutil
