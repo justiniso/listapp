@@ -66,4 +66,6 @@ venv/
 
 src/frontend/static/.sass-cache
 src/frontend/static/node_modules
+src/frontend/static/bower_components
 src/frontend/static/build
+

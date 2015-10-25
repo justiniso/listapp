@@ -7,8 +7,9 @@ all:deps build
 
 deps:
 	npm install
+	./node_modules/.bin/bower install
 
-build: css-build js-build jsx-build
+build: css-build js-build
 
 ### Build Static ###
 
@@ -18,10 +19,8 @@ css-build:
 
 js-build:
 	echo "Building JS"
-
-jsx-build:
-	echo "Building JSX"
-	node_modules/.bin/jsx ${SOURCE_SUBDIR}/jsx ${BUILD_SUBDIR}/js
+	cp node_modules/requirejs/require.js ${BUILD_SUBDIR}/js/_require.js
+	./node_modules/.bin/r.js -o config.js out=${BUILD_SUBDIR}/js/main.js optimize=none
 
 ### Clean ###
 

@@ -4,8 +4,11 @@
   "description": "Static frontend",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^3.3.5",
-    "jsx": "^0.9.89"
+    "bower": "^1.6.5",
+    "jsx": "^0.9.89",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "requirejs": "^2.1.20"
   },
   "devDependencies": {
     "react-tools": "~0.8.0"
