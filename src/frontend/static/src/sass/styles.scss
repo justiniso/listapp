@@ -1,0 +1,25 @@
+
+$theme-color: #28AF49;
+$warm-background: #fcf5e2;
+$cool-background: #f7f7fa;
+
+$text-color-primary: #000;
+$text-color-secondary: #737373;
+$text-color-tertiary: #bbb;
+
+$up-color: #da552f;
+$down-color: #00a3e1;
+
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+
+@import "_header";
+@import "_buttons";
+@import "_post";

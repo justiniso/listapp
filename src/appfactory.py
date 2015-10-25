@@ -23,14 +23,14 @@ def _register_blueprints(app, blueprints):
     return rv
 
 
-def create_app(package_name, blueprints=None):
+def create_app(package_name, blueprints=None, **kwargs):
     """Returns a :class:`Flask` application instance configured with common
     functionality for the Overholt platform.
 
     :param package_name: application package name
     :param blueprints: blueprint module
     """
-    app = Flask(package_name, instance_relative_config=True)
+    app = Flask(package_name, instance_relative_config=True, **kwargs)
 
     if blueprints:
         _register_blueprints(app, blueprints)
