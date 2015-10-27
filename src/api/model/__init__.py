@@ -5,6 +5,7 @@ import uuid
 import dateutil.parser
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql import func
 
 from src.api.database import db
 
@@ -75,6 +76,8 @@ class BaseModel(JsonSerializer, db.Model):
         return cls.__name__.lower()
 
     id = db.Column(db.Integer(), primary_key=True)
+    create_date = db.Column(db.DateTime(), default=func.now())
+    delete_date = db.Column(db.DateTime())
 
 
 Base = declarative_base(cls=BaseModel)

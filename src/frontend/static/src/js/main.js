@@ -1,3 +1,3 @@
-require(['jquery', 'bootstrap', 'react', 'list'], function(jquery) {
-    console.log('testing');
+require(['jquery', 'bootstrap'], function(jquery) {
+
 });

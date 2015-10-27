@@ -17,6 +17,11 @@ def healthcheck(_request=request):
     return jsonify(result={'status': 'ok'})
 
 
+@bp.errorhandler(404)
+def page_not_found(*args, **kwargs):
+    return render_template('404.html'), 404
+
+
 # TODO: don't serve static files from flask
 @bp.route('/fonts/<path:path>')
 def static_fonts(path):

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <div class="post">
+            <h1>{{post.title}}</h1>
+            <p class="spacey">
+                <a href="/todo">TODO DATE</a>
+            </p>
+            <!-- TODO: Tags go here-->
+            {% for item in post.items %}
+                {% include "_item.html" %}
+            {% endfor %}
+        </div>
+
+    </div>
+    <div class="col-xs-6 col-md-4">
+    </div>
+
+</div>
