@@ -6,7 +6,7 @@
                 <a href="/todo">TODO DATE</a>
             </p>
             <!-- TODO: Tags go here-->
-            {% for item in post.items %}
+            {% for item in post['items'] %}
                 {% include "_item.html" %}
             {% endfor %}
         </div>

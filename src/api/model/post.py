@@ -2,7 +2,8 @@
 
 from flask_restful import Resource, abort, request, fields, marshal_with, reqparse
 
-from . import Base
+from . import Base, item
+from sqlalchemy.orm import relationship
 from src.api.database import db
 
 
@@ -15,6 +16,8 @@ class Post(Base):
     description = db.Column(db.String(255))
     slug = db.Column(db.String(255))
     publish_date = db.Column(db.DateTime())
+
+    items = relationship('Item')
 
     def __init__(self, data=None):
         if data is not None:
@@ -30,7 +33,8 @@ public_fields = {
     'id': fields.Integer,
     'title': fields.String,
     'description': fields.String,
-    'publish_date': fields.DateTime
+    'publish_date': fields.DateTime,
+    'items': fields.Nested(item.public_fields)
 }
 
 
