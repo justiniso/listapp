@@ -1,15 +1,4 @@
 
-$theme-color: #28AF49;
-$warm-background: #fcf5e2;
-$cool-background: #f7f7fa;
-$light-hover-color: #f7f7fa;
-
-$text-color-primary: #000;
-$text-color-secondary: #737373;
-$text-color-tertiary: #bbb;
-
-$up-color: #da552f;
-$down-color: #00a3e1;
 
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
@@ -21,6 +10,9 @@ $down-color: #00a3e1;
 @import "bootstrap";
 
 
-@import "_header";
+@import "_colors";
+@import "_reset";
+@import "_banner";
 @import "_buttons";
+@import "_header";
 @import "_post";

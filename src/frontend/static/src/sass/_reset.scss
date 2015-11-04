@@ -1,0 +1,14 @@
+a {
+    color: $link-color;
+    text-decoration: none;
+    outline: none;
+
+    -moz-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    transition: all 0.05s ease-in-out;
+
+    &:hover {
+        color: $link-color-hover;
+    }
+}

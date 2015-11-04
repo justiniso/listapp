@@ -3,17 +3,21 @@
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 3px;
+    outline: none;
+
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 
-.btn {
+button, input[type="text"] {
     @include button();
-    color: #333;
-    border-color: #ccc;
-    border-width: 0px;
+    @extend .btn;
+    @extend .btn-default;
 
-    &.up {
-        @extend .btn;
+    &.vote.up {
         border-color: $up-color;
         color: $up-color;
 
@@ -23,8 +27,7 @@
         }
     }
 
-    &.down {
-        @extend .btn;
+    &.vote.down {
         border-color: $down-color;
         color: $down-color;
 

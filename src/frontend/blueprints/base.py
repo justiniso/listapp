@@ -17,6 +17,11 @@ def healthcheck(_request=request):
     return jsonify(result={'status': 'ok'})
 
 
+@bp.route('/styleguide')
+def styleguid(_request=request):
+    return render_template('styleguide.html')
+
+
 @bp.errorhandler(404)
 def page_not_found(*args, **kwargs):
     return render_template('404.html'), 404
