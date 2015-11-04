@@ -2,6 +2,13 @@ body {
     color: $text-color-dark;
     font: normal 14px Arial, helvetica, sans-serif;
     line-height: 25px;
+
+    background-color: black;
+
+    >.container {
+        padding: 10px 40px;
+        background-color: white;
+    }
 }
 
 a {
@@ -21,4 +28,5 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', Arial, helvetica, sans-serif;
+    font-weight: bold;
 }
